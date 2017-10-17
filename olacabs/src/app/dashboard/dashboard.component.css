@@ -1,0 +1,32 @@
+.card img:hover{
+    width: 100px;
+    height: 100px;
+
+}
+.well well-lg{
+    height:200px;
+}
+.card{
+    margin-top: 25px;
+    
+    
+}
+.card-block{
+    border: 1px solid #B9B7B7;
+    padding: 5px;
+    border-radius: 6px;
+   
+
+
+}
+button{
+    border-radius: 50px;
+}
+.card-img-top{
+    border-radius: 50px;
+}
+
+agm-map {
+    height: 170px;
+    width: 620px;
+  }

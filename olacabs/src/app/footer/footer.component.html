@@ -1,0 +1,38 @@
+
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">  -->
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3> About Instarent </h3>
+                    <p>I am a very simple card.I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Useful Links </h3>
+                    <ul>
+                        <li *ngFor="let useful of footer" [value]="useful.id"><a>{{useful.name}}</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3> Social Links </h3>
+                    <ul>
+                        <li *ngFor="let social of socialLink" [value]="social.id"><a>{{social.name}}</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                  <h3> Contact Us </h3>
+                  <ul>
+                      <li *ngFor="let contact of contactList"[value]="contact.id"><a>{{contact.name}}</a>  </li>
+                  </ul>
+              </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.footer-->
+  
+    
+    <!--/.footer-bottom-->
+  </footer>

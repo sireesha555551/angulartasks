@@ -1,0 +1,79 @@
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+    </div>
+    <ul class="nav navbar-nav">
+      <li *ngFor="let header of headerlist" [value]="header.id"><a [routerLink]="header.Route">{{header.name}}</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngFor="let headerl of headerleft" [value]="headerl.id"><a [routerLink]="headerl.Route"><i class="glyphicon glyphicon-user"></i>{{headerl.name}}</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<form #l="ngForm" (ngSubmit)="submit(l)">
+<div class="col-md-6">
+<div class="form-group">
+  <label for="usr">Enter Location</label>
+  <input type="text"  ngModel #location="ngModel"  name="location" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="usr">Enter Destintaion</label>
+  <input type="text"  ngModel #destination="ngModel" name="destination" class="form-control" id="usr">
+</div>
+
+<div class="card">
+  <button type="submit"><img class="card-img-top" src="/assets/images/1.png" alt="Card image cap" style="width:80px">Nano</button>
+  <button type="submit"> <img class="card-img-top" src="/assets/images/2.png" alt="Card image cap" style="width:80px">Micro</button>
+  <button type="submit"> <img class="card-img-top" src="/assets/images/3.png" alt="Card image cap" style="width:80px">Mini</button>
+  <button type="submit"><img class="card-img-top" src="/assets/images/4.jpg" alt="Card image cap" style="width:80px">Max</button>
+
+  
+</div>
+
+</div>
+</form>
+
+
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Location:{{fr}}</h4>
+      <h4 class="card-title">Destination:{{des}}</h4>
+  
+
+    
+
+      <div class="container">
+        <h1>Root Map</h1>
+        <div class="form-group">
+          <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl" style="width:620px">
+        </div>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+          <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        </agm-map>
+      </div>
+
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+ <router-outlet></router-outlet>
+ <!-- <app-footer></app-footer> -->
+ <!-- <app-header></app-header> -->

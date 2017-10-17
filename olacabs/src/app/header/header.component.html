@@ -1,0 +1,26 @@
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li *ngFor="let header of headerlist" [value]="header.id"><a [routerLink]="header.Route">{{header.name}}</a></li> -->
+   <li><a routerLink="body">Home</a></li>
+   <li><a routerLink="services">Services</a></li>
+   <li><a routerLink="rides">Rides</a></li>
+   
+   
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     
+        <li><a routerLink="signup"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+        <li><a routerLink="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      <!-- <li *ngFor="let headerl of headerleft" [value]="headerl.id"><a [routerLink]="headerl.Route"><i class="glyphicon glyphicon-user"></i>{{headerl.name}}</a></li> -->
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

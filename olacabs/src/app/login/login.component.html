@@ -1,0 +1,40 @@
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="container">
+        <div class="card card-container">
+                <form #l="ngForm" (ngSubmit)="submit(l)">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form [formGroup]="form" #l="ngForm" (ngSubmit)="submit(l)">
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input 
+                   formControlName="email"
+                      id="email" 
+                      type="email" 
+                      name="email"
+                      class="form-control">
+                      <div class="paragraph" *ngIf="form.get('email').touched && form.get('email').invalid">username required</div>
+            
+                    </div>
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input 
+                  formControlName="password"
+                      id="password" 
+                      type="password" 
+                      name="password"
+                      class="form-control">
+                      <div class="paragraph" *ngIf="form.get('password').touched && form.get('password').invalid">password required</div>
+              </div>
+              <button class="btn btn-primary" type="submit" >Login</button>
+            </form>
+            </form>
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->

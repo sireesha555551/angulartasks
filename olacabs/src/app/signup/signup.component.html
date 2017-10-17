@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row centered-form">
+      
+  <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Please sign up </h3>
+       </div>
+       <div class="panel-body">
+        <form [formGroup]="form" name="form" #f="ngForm" (ngSubmit)="submit(f)">
+          <div class="form-group">
+              <label for="username">Username</label>
+              <input 
+               formControlName="username"
+                  id="username" 
+                  type="text" 
+                  name="username"
+                  class="form-control">
+                  <div class="paragraph" *ngIf="form.get('username').touched && form.get('username').invalid">username required</div>
+        
+                </div>
+          <div class="form-group">
+              <label for="password">Email</label>
+              <input 
+              formControlName="email"
+                  id="email" 
+                  type="text" 
+                  name="email"
+                  class="form-control">
+                  <div class="paragraph" *ngIf="form.get('email').touched && form.get('email').invalid">email required</div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+            formControlName="password"
+                id="password" 
+                type="password" 
+                name="password"
+                class="form-control">
+                <div class="paragraph" *ngIf="form.get('password').touched && form.get('password').invalid"> password required</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password"> Conform Password</label>
+          <input 
+          formControlName="ConformPassword"
+              id="ConformPassword" 
+              type="password" 
+              class="form-control">
+              <div class="paragraph" *ngIf="form.get('ConformPassword').touched && form.get('ConformPassword').invalid">  conform password required</div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="mobile"> Mobile</label>
+        <input 
+        formControlName="mobile"
+            id="mobile" 
+            type="text" 
+            name="mobile"
+            class="form-control">
+            <div class="paragraph" *ngIf="form.get('mobile').touched && form.get('mobile').invalid">  mobile required</div>
+    </div>
+
+
+          <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Sign Up</button>
+          </form>
+         
+        
+        
+      </div>
+    </div>
+  </div>
+     
+</div>
+</div>
